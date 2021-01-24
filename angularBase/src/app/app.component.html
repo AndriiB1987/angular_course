@@ -1,2 +1,9 @@
-<app-posts></app-posts>
-<app-users></app-users>
+<!-- <app-posts></app-posts>
+<app-users></app-users> -->
+
+<ul>
+    <li><a [routerLink]="['link','main menu']">main menu</a></li>
+    <li><a [routerLink]="['link','posts']">posts</a></li>
+    <li><a [routerLink]="['link','users']">users</a></li>
+    <router-outlet></router-outlet>
+</ul>
