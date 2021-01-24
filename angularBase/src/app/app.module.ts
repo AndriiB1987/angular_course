@@ -8,7 +8,10 @@ import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import { PostComponent } from './components/post/post.component';
 import { PostsComponent } from './components/posts/posts.component';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { CarComponent } from './components/car/car.component';
+import { CarsComponent } from './components/cars/cars.component';
+import { FullCarComponent } from './components/full-car/full-car.component'
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { HomeComponent } from './components/home/home.component'
     UserComponent,
     PostComponent,
     PostsComponent,
-    HomeComponent
+    HomeComponent,
+    CarComponent,
+    CarsComponent,
+    FullCarComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,11 @@ import { HomeComponent } from './components/home/home.component'
       },
       {
         path: "link/users", component: UsersComponent
+      },
+      {
+        path: "link/cars", component: CarsComponent,children: [
+          {path: ':id', component: FullCarComponent}
+        ]
       }
     ])
   ],
